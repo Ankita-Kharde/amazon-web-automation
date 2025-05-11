@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-09-14T21:48:47.691846" rpa="false" schemaversion="5">
+<suite id="s1" name="Login" source="E:\Ankita\amazon-web-automation\pythonProject1\Testcase\Login.robot">
+<test id="s1-t1" name="Login to amazon" line="8">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-09-14T21:48:47.920939" level="INFO">Opening browser 'Chrome' to base url 'https://www.amazon.in/'.</msg>
+<arg>${AMAZON_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-09-14T21:48:47.920939" elapsed="113.115395"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-09-14T21:50:41.037469" elapsed="0.063213"/>
+</kw>
+<kw name="SIGN IN TO AMAZON" owner="Keywords">
+<kw name="Get Window Handles" owner="SeleniumLibrary">
+<msg time="2024-09-14T21:50:41.104049" level="INFO">${WINDOWS} = ['4B2BE01D61A32C13C50C547B6BD2CBDF']</msg>
+<var>${WINDOWS}</var>
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<status status="PASS" start="2024-09-14T21:50:41.101676" elapsed="0.002373"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-09-14T21:50:41.104597" level="INFO">${FIRST_TAB} = 4B2BE01D61A32C13C50C547B6BD2CBDF</msg>
+<var>${FIRST_TAB}</var>
+<arg>${WINDOWS[0]}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-09-14T21:50:41.104049" elapsed="0.000548"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-14T21:50:41.106931" level="INFO">Clicking element '//a[@id='nav-link-accountList'][1]'.</msg>
+<arg>${Sign_click}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-14T21:50:41.105913" elapsed="19.644257"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-14T21:51:00.751177" level="INFO">Typing text 'khardeankita289@gmail.com' into text field '//input[@id='ap_email']'.</msg>
+<arg>${USER NAME}</arg>
+<arg>khardeankita289@gmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-14T21:51:00.750170" elapsed="0.179684"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-09-14T21:51:00.929854" level="INFO">Clicking button '//input[contains(@id,'continue')]'.</msg>
+<arg>${CONTINUE_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-14T21:51:00.929854" elapsed="0.509594"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${PASSWORD}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-14T21:51:01.440447" elapsed="1.047680"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-14T21:51:02.489161" level="INFO">Typing text 'Ankita@289' into text field '//input[contains(@name,'pass')]'.</msg>
+<arg>${PASSWORD}</arg>
+<arg>Ankita@289</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-14T21:51:02.489161" elapsed="0.099048"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-14T21:51:02.589257" level="INFO">Clicking element '//input[@id = 'signInSubmit']'.</msg>
+<arg>${SIGN_IN_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-14T21:51:02.588209" elapsed="0.072629"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-14T21:51:14.662471" level="INFO">Slept 12 seconds.</msg>
+<arg>12</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-14T21:51:02.660838" elapsed="12.001633"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-09-14T21:53:17.366666" level="INFO">Current page contains element '//span[contains(text(),'Hello, Ankita')]'.</msg>
+<arg>${USER_IDENTIFICATION}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-09-14T21:51:14.663588" elapsed="122.703078"/>
+</kw>
+<status status="PASS" start="2024-09-14T21:50:41.100682" elapsed="156.265984"/>
+</kw>
+<status status="PASS" start="2024-09-14T21:48:47.919843" elapsed="269.447819"/>
+</test>
+<test id="s1-t2" name="Add item to Cart" line="14">
+<kw name="SEARCH ITEM IN SEARCH BOX" owner="Keywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-14T21:53:17.370662" level="INFO">Typing text 'milton water bottle 1 litre' into text field '//input[contains(@id,'searchtextbox')]'.</msg>
+<arg>${SEARCH_BOX}</arg>
+<arg>milton water bottle 1 litre</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-14T21:53:17.369662" elapsed="0.245556"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-14T21:53:17.616298" level="INFO">Clicking element '//input[@value = 'Go']'.</msg>
+<arg>${SEARCH_SUBMIT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-14T21:53:17.616298" elapsed="28.734282"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${WATER_BOTTLE}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-09-14T21:53:46.351583" elapsed="0.316601"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-14T21:53:48.669499" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-14T21:53:46.669340" elapsed="2.000159"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-14T21:53:48.670563" level="INFO">Clicking element '//img[contains(@src,'61c-GtJ+0eL._AC_UL320_.jpg')]'.</msg>
+<arg>${WATER_BOTTLE}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-14T21:53:48.669499" elapsed="0.234446"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-14T21:54:08.904789" level="INFO">Slept 20 seconds.</msg>
+<arg>20</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-14T21:53:48.903945" elapsed="20.000844"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-09-14T21:54:09.205458" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-09-14T21:54:08.905793" elapsed="0.299665"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-14T21:54:19.207074" level="INFO">Slept 10 seconds.</msg>
+<arg>10</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-14T21:54:09.206458" elapsed="10.000616"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>"Switching"</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-09-14T21:54:19.208107" elapsed="0.000992"/>
+</kw>
+<status status="PASS" start="2024-09-14T21:53:17.369662" elapsed="61.839437"/>
+</kw>
+<kw name="VERIFY PRODUCT DETAILS AND ADD ITEM TO CART" owner="Keywords">
+<kw name="Get Window Handles" owner="SeleniumLibrary">
+<msg time="2024-09-14T21:54:19.247092" level="INFO">${WINDOWS} = ['4B2BE01D61A32C13C50C547B6BD2CBDF', '02A43B5762067DE01E6ABFACFDE28A2B']</msg>
+<var>${WINDOWS}</var>
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<status status="PASS" start="2024-09-14T21:54:19.212100" elapsed="0.034992"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${WINDOWS}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-09-14T21:54:19.248207" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-09-14T21:54:19.249859" level="INFO">${SECOND_TAB} = 02A43B5762067DE01E6ABFACFDE28A2B</msg>
+<var>${SECOND_TAB}</var>
+<arg>${WINDOWS[1]}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-09-14T21:54:19.248207" elapsed="0.001652"/>
+</kw>
+<kw name="Switch Window" owner="SeleniumLibrary">
+<arg>${SECOND_TAB}</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" start="2024-09-14T21:54:19.249859" elapsed="0.048041"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-09-14T21:54:19.298898" level="INFO">Verifying element '//span[contains(text(),'Milton Duo DLX 1000 Thermosteel 24 Hours Hot and Cold Water Bottle, 1 Litre, Silver')]' contains exact text 'Milton Duo DLX 1000 Thermosteel 24 Hours Hot and Cold Water Bottle, 1 Litre, Silver'.</msg>
+<arg>${PRODUCT_TITLE}</arg>
+<arg>Milton Duo DLX 1000 Thermosteel 24 Hours Hot and Cold Water Bottle, 1 Litre, Silver</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-09-14T21:54:19.297900" elapsed="0.160851"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${PRODUCT_TITLE}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-09-14T21:54:19.458751" elapsed="0.000000"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>//h1[text()=' About this item ']</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-09-14T21:54:19.458751" elapsed="0.287033"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-09-14T21:54:19.796079" level="INFO">${Product_Brand} = MILTON</msg>
+<var>${Product_Brand}</var>
+<arg>//span[contains(text(),'Brand')]/parent::td/following-sibling::td</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-14T21:54:19.745784" elapsed="0.050295"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Product Brand retrived :${Product_Brand}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-09-14T21:54:19.796079" elapsed="0.000997"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-09-14T21:54:19.822762" level="INFO">${Product_Color} = Silver</msg>
+<var>${Product_Color}</var>
+<arg>//span[contains(text(),'Colour')]/parent::td/following-sibling::td</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-14T21:54:19.797076" elapsed="0.025686"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Product colour retrived :${Product_Color}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-09-14T21:54:19.823761" elapsed="0.000000"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-09-14T21:54:19.847096" level="INFO">${Product_Capacity} = 1000 Milliliters</msg>
+<var>${Product_Capacity}</var>
+<arg>//span[contains(text(),'Capacity')]/parent::td/following-sibling::td</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-14T21:54:19.823761" elapsed="0.023335"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Product Capacity retrived :${Product_Capacity}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-09-14T21:54:19.847096" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Product Brand = ${Product_Brand}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-09-14T21:54:19.848122" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Product Color = ${Product_Color}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-09-14T21:54:19.848654" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Product Capacity = ${Product_Capacity}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-09-14T21:54:19.848654" elapsed="0.000000"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${Product_Brand}</arg>
+<arg>MILTON</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2024-09-14T21:54:19.848654" elapsed="0.001033"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${Product_Color}</arg>
+<arg>Silver</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2024-09-14T21:54:19.849687" elapsed="0.000000"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${Product_Capacity}</arg>
+<arg>1000 Milliliters</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2024-09-14T21:54:19.849687" elapsed="0.000000"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-09-14T21:54:20.009338" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-09-14T21:54:19.849687" elapsed="0.159651"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-14T21:54:20.009338" level="INFO">Clicking element '//input[@id='add-to-cart-button']'.</msg>
+<arg>${ADD_TO_CART}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-14T21:54:20.009338" elapsed="0.129235"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-14T21:54:25.140528" level="INFO">Slept 5 seconds.</msg>
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-14T21:54:20.140080" elapsed="5.000448"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-09-14T21:54:25.311143" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-09-14T21:54:25.140528" elapsed="0.170615"/>
+</kw>
+<status status="PASS" start="2024-09-14T21:54:19.211102" elapsed="6.100041"/>
+</kw>
+<status status="PASS" start="2024-09-14T21:53:17.368660" elapsed="67.942483"/>
+</test>
+<status status="PASS" start="2024-09-14T21:48:47.692854" elapsed="337.619385"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="Login">Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
